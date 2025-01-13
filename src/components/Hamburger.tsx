@@ -9,7 +9,7 @@ export default function Hamburger({ className, ...props }: HamburgerProps) {
   return (
     <button className={cn("h-5 w-5", className)}>
       <div
-        className={cn("relative h-full w-full hover:cursor-pointer")}
+        className="relative h-full w-full hover:cursor-pointer"
         {...props}
         onClick={() => {
           setIsOpen(!isOpen);

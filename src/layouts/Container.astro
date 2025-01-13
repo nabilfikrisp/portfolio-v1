@@ -5,9 +5,9 @@ type Props = HTMLAttributes<"div">;
 const { class: className, ...props } = Astro.props;
 ---
 
-<main
+<div
   class:list={["flex h-full min-h-screen w-full flex-col", className]}
   {...props}
 >
   <slot />
-</main>
+</div>

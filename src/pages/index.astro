@@ -1,18 +1,20 @@
 ---
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
 import Container from "@/layouts/Container.astro";
 import Layout from "@/layouts/Layout.astro";
-import MaxWidthWrapper from "@/layouts/MaxWidthWrapper";
+import MainSection from "@/components/MainSection.astro";
+import MaxWidthWrapper from "@/layouts/MaxWidthWrapper.astro";
 ---
 
 <Layout>
   <Container>
-    <Header client:load />
-    <MaxWidthWrapper fillVertical>
-      <div class="animate-move-up">nabil</div>
-      <a href="/about">about</a>
+    <Header />
+
+    <MaxWidthWrapper fillVertical class="py-10">
+      <MainSection />
     </MaxWidthWrapper>
+
     <Footer />
   </Container>
 </Layout>

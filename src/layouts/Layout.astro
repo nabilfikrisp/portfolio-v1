@@ -1,4 +1,7 @@
 ---
+import "@fontsource-variable/outfit";
+import "@/assets/index.css";
+
 type Props = {
   pageTitle?: string;
 };
@@ -15,7 +18,7 @@ const { pageTitle = "nabilfikrisp" } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body class="bg-slate-800 text-white">
+  <body class="bg-gray-900 font-outfit text-gray-50 antialiased">
     <slot />
   </body>
 </html>

@@ -1,0 +1,15 @@
+.dot-bg {
+  background-image: radial-gradient(circle, #fff 2px, transparent 2px);
+  background-size: 100px 100px;
+  background-position: 0% 0%;
+  animation: pan 240s linear infinite;
+}
+
+@keyframes pan {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}

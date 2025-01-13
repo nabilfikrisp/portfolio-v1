@@ -1,0 +1,11 @@
+---
+import MaxWidthWrapper from "@/layouts/MaxWidthWrapper.astro";
+import type { HTMLAttributes } from "astro/types";
+
+type Props = HTMLAttributes<"footer">;
+const { class: className, ...props } = Astro.props;
+---
+
+<footer class:list={["border-t-gray-600 border-t", className]} {...props}>
+  <MaxWidthWrapper>footer</MaxWidthWrapper>
+</footer>
