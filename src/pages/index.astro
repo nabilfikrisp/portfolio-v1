@@ -2,19 +2,23 @@
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import Container from "@/layouts/Container.astro";
-import Layout from "@/layouts/Layout.astro";
-import MainSection from "@/components/MainSection.astro";
+import Root from "@/layouts/Root.astro";
+import MainSection from "@/components/sections/MainSection.astro";
 import MaxWidthWrapper from "@/layouts/MaxWidthWrapper.astro";
+import AboutSection from "@/components/sections/AboutSection.astro";
+import ExperienceSection from "@/components/sections/ExperienceSection.astro";
 ---
 
-<Layout>
+<Root>
   <Container>
     <Header />
 
-    <MaxWidthWrapper fillVertical class="py-10">
+    <MaxWidthWrapper fillVertical class="space-y-6 py-10">
       <MainSection />
+      <AboutSection />
+      <ExperienceSection />
     </MaxWidthWrapper>
 
     <Footer />
   </Container>
-</Layout>
+</Root>

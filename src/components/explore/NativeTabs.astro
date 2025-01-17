@@ -1,0 +1,64 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Props = HTMLAttributes<"div">;
+const { class: className, ...props } = Astro.props;
+---
+
+<div
+  id="tab-parent"
+  class:list={["group w-full", className]}
+  data-tab-key="work"
+>
+  <ul class:list={["flex"]} data-tab-list>
+    <li
+      data-tab-trigger="work"
+      class:list={[
+        "flex-1 hover:cursor-pointer",
+        `group-data-[tab-key=work]:bg-my-accent-two`,
+      ]}
+    >
+      work
+    </li>
+    <li
+      data-tab-trigger="experience"
+      class:list={[
+        "flex-1 hover:cursor-pointer",
+        `group-data-[tab-key=experience]:bg-my-accent-two`,
+      ]}
+    >
+      experience
+    </li>
+  </ul>
+
+  <div
+    data-tab-panel
+    class:list={["hidden", `group-data-[tab-key=work]:block`]}
+  >
+    work panel
+  </div>
+  <div
+    data-tab-panel
+    class:list={["hidden", `group-data-[tab-key=experience]:block`]}
+  >
+    experience panel
+  </div>
+</div>
+
+<script>
+  const tabParent = document.querySelector("#tab-parent");
+
+  if (!tabParent)
+    throw new Error("Tab parent are required, create a div with id tab-parent");
+
+  const triggers = document.querySelectorAll("[data-tab-trigger]");
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener("click", () =>
+      tabParent.setAttribute(
+        "data-tab-key",
+        trigger.getAttribute("data-tab-trigger") as string
+      )
+    );
+  });
+</script>

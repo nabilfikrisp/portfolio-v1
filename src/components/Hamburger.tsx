@@ -17,13 +17,13 @@ export default function Hamburger({ className, ...props }: HamburgerProps) {
       >
         <div
           className={cn(
-            "absolute top-1 h-[2px] w-full bg-white transition-all",
+            "absolute top-1 h-[2px] w-full bg-my-accent-one transition-all",
             isOpen && "top-1/2 -translate-y-1/2 rotate-45 transform"
           )}
         />
         <div
           className={cn(
-            "absolute bottom-1 h-[2px] w-full bg-white transition-all",
+            "absolute bottom-1 h-[2px] w-full bg-my-accent-one transition-all",
             isOpen && "top-1/2 -translate-y-1/2 -rotate-45 transform"
           )}
         />

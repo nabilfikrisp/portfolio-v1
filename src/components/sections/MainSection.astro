@@ -1,0 +1,57 @@
+---
+import { EXTERNAL_LINKS } from "@/lib/constants";
+---
+
+<section
+  class="mx-auto flex flex-col gap-6 rounded-lg sm:flex-row"
+  id="main-section"
+>
+  <div class="flex flex-1 flex-col gap-2">
+    <h1 class="text-my-headline text-5xl font-semibold tracking-tight">
+      Nabil Fikri
+    </h1>
+    <h2 class="text-balance text-2xl">
+      Front End Dev Who Can Build Full Stack Apps Too
+    </h2>
+    <div class="flex items-center text-lg">
+      <div class="bg-my-accent-one p-1 mr-2 rounded-sm">
+        <img
+          class="h-4 w-6 rounded-sm"
+          src="/icons/flag.webp"
+          alt="indonesian-flag"
+        />
+      </div>
+      <p>Bandung, West Java, Indonesia</p>
+    </div>
+
+    <div class="mt-2 flex items-center gap-4">
+      <button
+        class="bg-my-accent-one text-my-accent-text flex h-8 items-center rounded-sm p-1 px-2 pe-3 text-lg font-medium transition-transform duration-500 hover:-rotate-2"
+      >
+        <img
+          src="icons/resume.svg"
+          alt="resume-icon"
+          class="mr-1 h-6 w-6 object-cover text"
+        />
+        Resume
+      </button>
+      {
+        EXTERNAL_LINKS.map((item) => (
+          <a
+            href={item.href}
+            class="h-8 w-8 transition-transform duration-500 hover:-rotate-12"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={item.imgSrc} alt={item.imgAlt} class="object-cover" />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+  <div
+    class="border-my-accent-one flex h-fit w-fit items-center justify-center rounded-full overflow-hidden border-2 p-1"
+  >
+    <img class="h-36 w-36 rounded-full object-cover" src="/profile.jpg" />
+  </div>
+</section>

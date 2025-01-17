@@ -1,15 +1,5 @@
 ---
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Container from "@/layouts/Container.astro";
-import Layout from "@/layouts/Layout.astro";
-import MaxWidthWrapper from "@/layouts/MaxWidthWrapper";
+import Root from "@/layouts/Root.astro";
 ---
 
-<Layout>
-  <Container>
-    <Header client:load />
-    <MaxWidthWrapper fillVertical> about </MaxWidthWrapper>
-    <Footer />
-  </Container>
-</Layout>
+<Root> test </Root>

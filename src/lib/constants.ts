@@ -6,7 +6,7 @@ export const EXTERNAL_LINKS = [
   },
   {
     href: "https://github.com/nabilfikrisp",
-    imgSrc: "/icons/github-dark.svg",
+    imgSrc: "/icons/github-light.svg",
     imgAlt: "github-icon",
   },
   // {
