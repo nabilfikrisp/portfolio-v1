@@ -20,7 +20,9 @@ export function Tabs({ defaultValue, className, children }: TabsProps) {
 
   return (
     <TabsContext.Provider value={{ activeTab, setActiveTab }}>
-      <div className={cn("group w-full", className)}>{children}</div>
+      <div className={cn("group w-full", className)} data-tab-key={activeTab}>
+        {children}
+      </div>
     </TabsContext.Provider>
   );
 }
@@ -34,10 +36,21 @@ export function TabList({
 
 type TabTriggerType = {
   value: string;
+  activeClassName?: string;
 } & ComponentPropsWithoutRef<"li">;
 export function TabTrigger({ value, className, children }: TabTriggerType) {
   const context = useContext(TabsContext);
   if (!context) throw new Error("Tab Trigger needs to be used within Tabs");
+
+  const handleClick = () => {
+    context.setActiveTab(value);
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === "Enter") {
+      handleClick();
+    }
+  };
 
   return (
     <li
@@ -46,7 +59,9 @@ export function TabTrigger({ value, className, children }: TabTriggerType) {
         value === context.activeTab && "bg-my-accent-two",
         className
       )}
-      onClick={() => context.setActiveTab(value)}
+      onClick={() => handleClick()}
+      onKeyDown={(event) => handleKeyDown(event)}
+      tabIndex={0}
     >
       {children}
     </li>
