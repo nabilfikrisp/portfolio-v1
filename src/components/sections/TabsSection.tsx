@@ -1,5 +1,6 @@
-import { WORKS, type WorkType } from "@/consts/work-experiance.ts";
 import { TabList, TabPanel, Tabs, TabTrigger } from "../Tabs";
+import { EducationHistoryCards } from "./tabs/EducationHistoryCards";
+import { WorkExperienceCards } from "./tabs/WorkExperienceCards";
 
 export default function TabsSection() {
   return (
@@ -20,51 +21,11 @@ export default function TabsSection() {
         </TabTrigger>
       </TabList>
       <TabPanel value="work">
-        <CardList />
+        <WorkExperienceCards />
       </TabPanel>
       <TabPanel value="education">
-        <CardList />
+        <EducationHistoryCards />
       </TabPanel>
     </Tabs>
-  );
-}
-
-function CardList() {
-  return (
-    <div className="mt-4 flex flex-col gap-5 rounded border border-my-accent-one p-5">
-      {WORKS.map((work, index) => (
-        <Card key={index} work={work} />
-      ))}
-    </div>
-  );
-}
-
-function Card({ work }: { work: WorkType }) {
-  return (
-    <div className="flex gap-5">
-      <div className="aspect-square h-full w-20 overflow-hidden rounded border">
-        {work.imageUrl}
-      </div>
-      <div className="gap flex flex-1 flex-col">
-        <h2 className="text-xl font-semibold text-my-accent-one">
-          {work.title}
-        </h2>
-        <div className="flex gap-2 text-my-paragraph/70">
-          <span>{work.company}</span>
-          <span>|</span>
-          <span>{work.employmentType}</span>
-          <span>|</span>
-          <span>{work.date}</span>
-        </div>
-        <p>{work.description}</p>
-        {work.descriptionList && (
-          <ul>
-            {work.descriptionList.map((text) => (
-              <li key={text}>- {text}</li>
-            ))}
-          </ul>
-        )}
-      </div>
-    </div>
   );
 }
