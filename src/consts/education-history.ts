@@ -18,4 +18,10 @@ export const EDUCATIONS: EducationType[] = [
     institute: "MSIB Kampus Merdeka",
     date: "2023",
   },
+  {
+    imageUrl: "/education-logos/sman5.png",
+    title: "High School Graduate",
+    institute: "SMAN 5 Bandung",
+    date: "2017 - 2020",
+  },
 ];
