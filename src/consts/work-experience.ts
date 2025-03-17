@@ -80,6 +80,6 @@ export const WORKS: WorkType[] = [
     employmentType: "Freelance",
     date: "Jun 2022 - Sep 2022",
     description: "Developed a voting app for their award event.",
-    descriptionList: ["User by around 200 total users"],
+    descriptionList: ["Used by around 200 total users"],
   },
 ];
