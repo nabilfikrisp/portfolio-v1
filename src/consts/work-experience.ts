@@ -43,9 +43,9 @@ export const WORKS: WorkType[] = [
     date: "Dec 2023 - Aug 2024",
     description: "Developed app.toeps.id",
     descriptionList: [
-      "Handled the frontend and backend of the app solo",
+      "Handled the frontend and backend of the app independently",
       "Collaborated with Dev Ops to deploy the app",
-      "Used by around +2.000 users",
+      "Used by around 9.000+ users",
     ],
   },
   {
@@ -70,7 +70,19 @@ export const WORKS: WorkType[] = [
     descriptionList: [
       "Developed the exam feature",
       "Collaborated with the Unpad team to deploy the app",
-      "Used by around +20.000 total users",
+    ],
+  },
+  {
+    imageUrl: "/company-logos/neospectra.png",
+    title: "Full Stack Developer",
+    company: "LKP Neo Spectra English",
+    employmentType: "Freelance",
+    date: "Feb 2023 - May 2023",
+    description: "Developed version 1 of toeps.id",
+    descriptionList: [
+      "Handled the frontend and backend of the app independently",
+      "Collaborated with Dev Ops to deploy the app",
+      "Served 20,000+ users",
     ],
   },
   {

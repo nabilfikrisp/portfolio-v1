@@ -1,132 +1,176 @@
+export const TECH_STACK_SLUG = {
+  REACT: "react",
+  JAVASCRIPT: "javascript",
+  TYPESCRIPT: "typescript",
+  EXPRESS: "express",
+  NODE_JS: "node-js",
+  NEXT_JS: "next-js",
+  NEST_JS: "nest-js",
+  TAILWIND: "tailwind",
+  ASTRO: "astro",
+  TANSTACK_QUERY: "tanstack-query",
+  REDUX_TOOLKIT: "redux-toolkit",
+  PYTHON: "python",
+  PYTORCH: "pytorch",
+  GITHUB: "github",
+  MYSQL: "mysql",
+  POSTGRESQL: "postgressql",
+  MONGODB: "mongodb",
+  PHP: "php",
+  LARAVEL: "laravel",
+  SHADCN: "shadcn",
+  DAISYUI: "daisyui",
+  CHAKRAUI: "chakraui",
+  REACT_ROUTER: "react-router",
+  JEST: "jest",
+  VITE: "vite",
+  FLASK: "flask",
+  CYPRESS: "cypress",
+} as const;
+
+export type TechStackSlugType =
+  (typeof TECH_STACK_SLUG)[keyof typeof TECH_STACK_SLUG];
+
 export type TechStackType = {
   imageUrl: string;
   name: string;
-  slug: TechStackKeys;
+  slug: TechStackSlugType;
 };
 
 export const TECH_STACKS = {
-  react: {
+  [TECH_STACK_SLUG.REACT]: {
     imageUrl: "/tech-logos/react.png",
     name: "React",
-    slug: "react",
+    slug: TECH_STACK_SLUG.REACT,
   },
-  javascript: {
+  [TECH_STACK_SLUG.JAVASCRIPT]: {
     imageUrl: "/tech-logos/javascript.png",
     name: "Javascript",
-    slug: "javascript",
+    slug: TECH_STACK_SLUG.JAVASCRIPT,
   },
-  typescript: {
+  [TECH_STACK_SLUG.TYPESCRIPT]: {
     imageUrl: "/tech-logos/typescript.png",
     name: "Typescript",
-    slug: "typescript",
+    slug: TECH_STACK_SLUG.TYPESCRIPT,
   },
-  express: {
+  [TECH_STACK_SLUG.EXPRESS]: {
     imageUrl: "/tech-logos/express.png",
     name: "Express",
-    slug: "express",
+    slug: TECH_STACK_SLUG.EXPRESS,
   },
-  "node-js": {
+  [TECH_STACK_SLUG.NODE_JS]: {
     imageUrl: "/tech-logos/node-js.png",
     name: "Node.js",
-    slug: "node-js",
+    slug: TECH_STACK_SLUG.NODE_JS,
   },
-  "nest-js": {
+  [TECH_STACK_SLUG.NEST_JS]: {
     imageUrl: "/tech-logos/nest-js.png",
     name: "Nest.js",
-    slug: "nest-js",
+    slug: TECH_STACK_SLUG.NEST_JS,
   },
-  "next-js": {
+  [TECH_STACK_SLUG.NEXT_JS]: {
     imageUrl: "/tech-logos/next-js.png",
     name: "Next.js",
-    slug: "next-js",
+    slug: TECH_STACK_SLUG.NEXT_JS,
   },
-  tailwind: {
+  [TECH_STACK_SLUG.TAILWIND]: {
     imageUrl: "/tech-logos/tailwind.png",
     name: "Tailwind",
-    slug: "tailwind",
+    slug: TECH_STACK_SLUG.TAILWIND,
   },
-  astro: {
+  [TECH_STACK_SLUG.ASTRO]: {
     imageUrl: "/tech-logos/astro.png",
     name: "Astro",
-    slug: "astro",
+    slug: TECH_STACK_SLUG.ASTRO,
   },
-  "tanstack-query": {
+  [TECH_STACK_SLUG.TANSTACK_QUERY]: {
     imageUrl: "/tech-logos/tanstack.png",
     name: "Tanstack Query",
-    slug: "tanstack-query",
+    slug: TECH_STACK_SLUG.TANSTACK_QUERY,
   },
-  "redux-toolkit": {
+  [TECH_STACK_SLUG.REDUX_TOOLKIT]: {
     imageUrl: "/tech-logos/redux.svg",
     name: "Redux Toolkit",
-    slug: "redux-toolkit",
+    slug: TECH_STACK_SLUG.REDUX_TOOLKIT,
   },
-  python: {
+  [TECH_STACK_SLUG.PYTHON]: {
     imageUrl: "/tech-logos/python.png",
     name: "Python",
-    slug: "python",
+    slug: TECH_STACK_SLUG.PYTHON,
   },
-  pytorch: {
+  [TECH_STACK_SLUG.PYTORCH]: {
     imageUrl: "/tech-logos/pytorch.png",
     name: "Pytorch",
-    slug: "pytorch",
+    slug: TECH_STACK_SLUG.PYTORCH,
   },
-  github: {
+  [TECH_STACK_SLUG.GITHUB]: {
     imageUrl: "/tech-logos/github.png",
     name: "Github",
-    slug: "github",
+    slug: TECH_STACK_SLUG.GITHUB,
   },
-  mysql: {
+  [TECH_STACK_SLUG.MYSQL]: {
     imageUrl: "/tech-logos/mysql.png",
     name: "MySQL",
-    slug: "mysql",
+    slug: TECH_STACK_SLUG.MYSQL,
   },
-  postgressql: {
+  [TECH_STACK_SLUG.POSTGRESQL]: {
     imageUrl: "/tech-logos/postgressql.png",
     name: "PostgresSQL",
-    slug: "postgressql",
+    slug: TECH_STACK_SLUG.POSTGRESQL,
   },
-  mongodb: {
+  [TECH_STACK_SLUG.MONGODB]: {
     imageUrl: "/tech-logos/mongodb.png",
     name: "MongoDB",
-    slug: "mongodb",
+    slug: TECH_STACK_SLUG.MONGODB,
   },
-  php: {
+  [TECH_STACK_SLUG.PHP]: {
     imageUrl: "/tech-logos/php.png",
     name: "PHP",
-    slug: "php",
+    slug: TECH_STACK_SLUG.PHP,
   },
-  laravel: {
+  [TECH_STACK_SLUG.LARAVEL]: {
     imageUrl: "/tech-logos/laravel.png",
     name: "Laravel",
-    slug: "laravel",
+    slug: TECH_STACK_SLUG.LARAVEL,
   },
-  shadcn: {
+  [TECH_STACK_SLUG.SHADCN]: {
     imageUrl: "/tech-logos/shadcn.svg",
     name: "Shadcn",
-    slug: "shadcn",
+    slug: TECH_STACK_SLUG.SHADCN,
   },
-  daisyui: {
+  [TECH_STACK_SLUG.DAISYUI]: {
     imageUrl: "/tech-logos/daisyui.svg",
     name: "DaisyUI",
-    slug: "daisyui",
+    slug: TECH_STACK_SLUG.DAISYUI,
   },
-  chakraui: {
+  [TECH_STACK_SLUG.CHAKRAUI]: {
     imageUrl: "/tech-logos/chakraui.png",
     name: "ChakraUI",
-    slug: "chakraui",
+    slug: TECH_STACK_SLUG.CHAKRAUI,
   },
-  "react-router": {
+  [TECH_STACK_SLUG.REACT_ROUTER]: {
     imageUrl: "/tech-logos/react-router.svg",
     name: "React Router",
-    slug: "react-router",
+    slug: TECH_STACK_SLUG.REACT_ROUTER,
   },
-  jest: {
+  [TECH_STACK_SLUG.JEST]: {
     imageUrl: "/tech-logos/jest.png",
     name: "Jest",
-    slug: "jest",
+    slug: TECH_STACK_SLUG.JEST,
+  },
+  [TECH_STACK_SLUG.VITE]: {
+    imageUrl: "/tech-logos/vite.png",
+    name: "Vite",
+    slug: TECH_STACK_SLUG.VITE,
+  },
+  [TECH_STACK_SLUG.FLASK]: {
+    imageUrl: "/tech-logos/flask.png",
+    name: "Flask",
+    slug: TECH_STACK_SLUG.FLASK,
+  },
+  [TECH_STACK_SLUG.CYPRESS]: {
+    imageUrl: "/tech-logos/cypress.png",
+    name: "Cypress",
+    slug: TECH_STACK_SLUG.CYPRESS,
   },
 } as const;
-
-export type TechStackKeys = keyof typeof TECH_STACKS;
-// Type the TECH_STACKS object
-export const TYPED_TECH_STACKS: { [key: string]: TechStackType } = TECH_STACKS;

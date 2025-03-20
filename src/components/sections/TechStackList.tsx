@@ -1,4 +1,4 @@
-import { TYPED_TECH_STACKS, type TechStackKeys } from "@/consts/tech-stack";
+import { TECH_STACKS, type TechStackSlugType } from "@/consts/tech-stack";
 import { useMemo } from "react";
 
 export default function TechStackList({
@@ -6,13 +6,13 @@ export default function TechStackList({
   clickCallback,
 }: {
   selectedTechs: Set<string>;
-  clickCallback: (tech: TechStackKeys) => void;
+  clickCallback: (slug: TechStackSlugType) => void;
 }) {
   const techStackItems = useMemo(() => {
-    return Object.values(TYPED_TECH_STACKS).map((tech) => (
+    return Object.values(TECH_STACKS).map((tech) => (
       <div
         key={tech.slug}
-        className={`flex cursor-pointer items-center gap-2 rounded border px-2 py-1 pe-3 ${
+        className={`flex cursor-pointer items-center gap-2 rounded border px-2 py-1 pe-3 transition-transform duration-300 hover:-rotate-3 ${
           selectedTechs.has(tech.slug)
             ? "bg-my-accent-one text-white"
             : "border-my-accent-one"
