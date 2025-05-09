@@ -20,3 +20,6 @@ export const EXTERNAL_LINKS = [
   //   imgAlt: "instagram-icon",
   // },
 ] as const;
+
+export const RESUME_LINK =
+  "https://www.linkedin.com/in/mnabilfikrisp/overlay/1735558190932/single-media-viewer/?profileId=ACoAADn0mBwBBTnCc_fN_manfxkUr7zSu00Jrt0" as const;

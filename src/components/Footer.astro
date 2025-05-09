@@ -4,8 +4,35 @@ import type { HTMLAttributes } from "astro/types";
 
 type Props = HTMLAttributes<"footer">;
 const { class: className, ...props } = Astro.props;
+
+// Get current year for copyright
+const currentYear = new Date().getFullYear();
 ---
 
-<footer class:list={["border-t-gray-600 border-t", className]} {...props}>
-  <MaxWidthWrapper>footer</MaxWidthWrapper>
+<footer
+  class:list={[
+    "border-t border-t-gray-600 bg-my-background py-4 text-gray-700 dark:text-gray-300",
+    className,
+  ]}
+  {...props}
+>
+  <MaxWidthWrapper>
+    <div class="flex flex-col items-center justify-between gap-4 md:flex-row">
+      <div class="flex flex-col">
+        <h3 class="text-lg font-semibold text-my-accent-one">
+          Muhammad Nabil Fikri Sudjarpadi Putra
+        </h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+          Full Stack Web Developer
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="mt-6 border-t border-gray-200 pt-6 text-center text-sm text-gray-500 dark:border-gray-800 dark:text-gray-400"
+    >
+      <p>© {currentYear} micanskuy.tech. All rights reserved.</p>
+      <p class="mt-2">Developed & Built with ❤️</p>
+    </div>
+  </MaxWidthWrapper>
 </footer>

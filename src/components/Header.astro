@@ -1,7 +1,7 @@
 ---
 import MaxWidthWrapper from "@/layouts/MaxWidthWrapper.astro";
 import type { HTMLAttributes } from "astro/types";
-import Hamburger from "./Hamburger";
+// import Hamburger from "./Hamburger";
 
 type Props = HTMLAttributes<"header">;
 const { class: className, ...props } = Astro.props;
@@ -18,9 +18,9 @@ const { class: className, ...props } = Astro.props;
     <nav class="flex items-center gap-4">
       <span
         class="mr-auto font-outfit text-3xl font-semibold tracking-tighter hover:cursor-pointer"
-        >micanskuy.dev</span
+        >micanskuy.tech</span
       >
-      <Hamburger client:load />
+      <!-- <Hamburger client:load /> -->
     </nav>
   </MaxWidthWrapper>
 </header>
