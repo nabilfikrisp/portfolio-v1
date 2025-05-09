@@ -1,7 +1,7 @@
 {
-  "name": "portfolio-v1",
+  "name": "nabil-fikri-portfolio",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -9,13 +9,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^4.1.2",
-    "@astrojs/tailwind": "^5.1.4",
+    "@astrojs/react": "^4.2.7",
+    "@astrojs/tailwind": "^6.0.2",
     "@astrojs/ts-plugin": "^1.10.4",
     "@fontsource-variable/outfit": "^5.1.1",
+    "@formkit/auto-animate": "^0.8.2",
     "@types/react": "^19.0.4",
     "@types/react-dom": "^19.0.2",
-    "astro": "^5.1.4",
+    "astro": "^5.7.12",
     "clsx": "^2.1.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

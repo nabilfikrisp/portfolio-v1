@@ -1,5 +1,6 @@
 import { PROJECTS } from "@/consts/projects";
 import { TECH_STACKS, type TechStackSlugType } from "@/consts/tech-stack";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { useMemo } from "react";
 
 export default function WebsitesAndprojectsList({
@@ -7,6 +8,8 @@ export default function WebsitesAndprojectsList({
 }: {
   selectedTechs: Set<TechStackSlugType>;
 }) {
+  const [parent] = useAutoAnimate();
+
   const projects = useMemo(() => {
     return PROJECTS.filter((project) => {
       if (selectedTechs.size === 0) {
@@ -34,7 +37,7 @@ export default function WebsitesAndprojectsList({
   }
 
   return (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2" ref={parent}>
       {projects.map((project) => (
         <div
           key={project.id}
