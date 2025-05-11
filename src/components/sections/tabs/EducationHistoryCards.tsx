@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 export function EducationHistoryCards() {
   return (
-    <div className="mt-4 flex flex-col overflow-hidden rounded border border-my-accent-one px-5">
+    <div className="mt-2 flex flex-col overflow-hidden rounded border border-my-accent-one px-2 lg:mt-4 lg:px-5">
       {EDUCATIONS.map((education, index) => (
         <EducationHistoryCard
           key={index}
@@ -40,7 +40,7 @@ export function EducationHistoryCard({
       >
         <div className="absolute right-1/2 top-0 -z-10 h-full w-[2px] bg-my-accent-one text-transparent" />
         <img
-          className="z-10 aspect-square h-20 w-20 overflow-hidden rounded border border-my-accent-one bg-my-background object-scale-down"
+          className="z-10 aspect-square h-16 w-16 overflow-hidden rounded border border-my-accent-one bg-my-background object-scale-down lg:h-20 lg:w-20"
           src={education.imageUrl}
         />
       </div>
